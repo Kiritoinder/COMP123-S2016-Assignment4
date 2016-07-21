@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/**
+ * Author: Inderjeet Singh
+ * StudentNumber: 300874118
+ * Description: Driver class for Airline_Reservation_System
+ * Version: 0.0.1
+ * DateCreated: July 21rd, 2016
+ * DateModified: July 21rd, 2016
+ */
 namespace Airline_Reservation_System
 {
     class Flight
     {
+        //Private Instance variables++++++++++++++++++++
         private bool[] _seatsAvailible = new bool[10];
         private string ChangeClass;
 
@@ -16,6 +24,8 @@ namespace Airline_Reservation_System
         {
             _initializeArray();
         }
+
+
         //Private Methdos ++++++++++++++++++++++++++++++
         private void _initializeArray()
         {
@@ -102,15 +112,14 @@ namespace Airline_Reservation_System
                 }
             }
             Console.WriteLine();
-            Console.WriteLine("-----------------------------------------");
         }
         public void printEconomicclass()
         {
-            for (int index = 0; index < _seatsAvailible.Length; index++)
+            for (int index = 6; index < _seatsAvailible.Length; index++)
             {
                 if (this._seatsAvailible[index] == true)
                 {
-                    Console.Write(" Selected  ");
+                    Console.Write(" Economic Class Seat Selected  ");
                 }
 
             }
